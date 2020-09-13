@@ -7,12 +7,9 @@ import {
 } from "../../action/actionCsvList";
 import {dendersMomentsNotification} from "../../action/actionsNotif";
 import CSVReader from "react-csv-reader";
-import * as PapaParse from 'papaparse'
 import style from "./FormEnter.css";
-import csvFile from "./file/recordSensor.csv";
 import {useHistory} from "react-router-dom";
 
-let defaultCsvFile = "./file/recordSensor.csv";
 const FormEnter = ({
                        csvList,
                        setItemCsv,
@@ -61,7 +58,6 @@ const FormEnter = ({
                         setItemCsv({...data})
                     }
                     parserOptions={papaparseOptions}
-                    value={defaultCsvFile}
                 />
             </div>
             <div className={style.button} onClick={handleSendData}>
